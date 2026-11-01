@@ -32,14 +32,14 @@
 *{box-sizing:border-box;margin:0;padding:0}:root{--c-cream:#fff9ef;--c-paper:#fffdf6;--c-ink:#111;--c-ink-soft:#444;--c-ink-muted:#777;--c-yellow:#ffd23f;--c-blue:#4d9de0;--c-pink:#ff5c8a;--c-red:#e94560;--c-purple:#9b59b6;--c-green:#2ec4b6;--c-orange:#ff9f1c;--border-w:2px;--border-w-lg:3px;--shadow-hard:3px 3px 0 var(--c-ink);--shadow-hard-lg:5px 5px 0 var(--c-ink);--shadow-hard-sm:2px 2px 0 var(--c-ink);--r-corner:4px;--font-main:'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif;--r-sm:4px;--r-md:4px;--r-lg:6px;--r-pill:999px;--c-red-bg:#e9456022;--c-yellow-bg:#ffd23f22;--c-pink-bg:#ff5c8a22;--c-purple-bg:#9b59b622}.mode-dark{--c-cream:#0f0d17;--c-paper:#1d1a28;--c-ink:#f2edf7;--c-ink-soft:#cfc8dc;--c-ink-muted:#8f88a3;--c-yellow:#f5c518;--c-blue:#56b9ff;--c-pink:#ff5fa2;--c-red:#ff4d6d;--c-purple:#bb8ef9;--c-green:#2fd9a4;--c-orange:#ff9e2e;--c-red-bg:rgba(255,77,109,0.14);--c-yellow-bg:rgba(245,197,24,0.14);--c-pink-bg:rgba(255,95,162,0.14);--c-purple-bg:rgba(187,142,249,0.14);--shadow-hard:3px 3px 0 var(--c-ink);--shadow-hard-lg:5px 5px 0 var(--c-ink);--shadow-hard-sm:2px 2px 0 var(--c-ink)}.mode-dark .id-card{background:#14213a}.mode-dark .mainline{background:#6e2438}.mode-dark .hot-row.top{background:linear-gradient(90deg,rgba(245,197,24,0.14),rgba(245,197,24,0.02))}.mode-dark .quest-card.st-active{background:linear-gradient(90deg,rgba(245,197,24,0.12),rgba(245,197,24,0.02))}.mode-dark .quest-card.st-done{background:linear-gradient(90deg,rgba(47,217,164,0.12),rgba(47,217,164,0.02))}.mode-dark .outfit-cell.overall,.mode-dark .look-cell.overall{background:linear-gradient(90deg,rgba(245,197,24,0.12),rgba(245,197,24,0.02))}.mode-dark .look-cell.appearance{background:linear-gradient(90deg,#14213a 0%,var(--c-paper) 46%)}.mode-dark .rail-title,.mode-dark .group-title,.mode-dark .title-text,.mode-dark .title-tag{background:var(--c-yellow);color:#111}.mode-dark .title-text,.mode-dark .fame-badge,.mode-dark .sin-strip,.mode-dark .sin-strip .sin-text,.mode-dark .tab-btn.active,.mode-dark .cat-btn.active,.mode-dark .mainline-label,.mode-dark .reward-text,.mode-dark .reward-icon,.mode-dark .shop-price,.mode-dark .shop-stock,.mode-dark .rank-badge.rank-1,.mode-dark .rank-badge.rank-2,.mode-dark .rank-badge.rank-3,.mode-dark .rank-tag,.mode-dark .hot-num,.mode-dark .hot-detail,.mode-dark .gossip-detail,.mode-dark .cred-badge.cred-mid,.mode-dark .cred-badge.cred-hot,.mode-dark .relation-value,.mode-dark .relation-heart,.mode-dark .quest-status.st-active,.mode-dark .quest-status.st-done,.mode-dark .src-insider,.mode-dark .src-paparazzi,.mode-dark .src-forum,.mode-dark .src-tipster,.mode-dark .tp-main,.mode-dark .tp-side,.mode-dark .tp-sys,.mode-dark .rel-tag{color:#111 !important}.mode-dark .rel-line.voice .rel-tag{color:var(--c-ink-muted) !important}.mode-dark .sin-strip.sin-whisper .sin-text{color:#1b1b2a !important}.mode-dark .story-text{color:#111 !important}html,body{background:transparent;color:var(--c-ink);font-family:var(--font-main);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:100%;min-height:auto;overflow-x:hidden;overflow-y:visible}::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--c-ink);border-radius:0}::-webkit-scrollbar-thumb:hover{background:var(--c-red)}.tabular-nums{font-variant-numeric:tabular-nums;font-feature-settings:'tnum'}.empty-hint{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:26px 16px;margin:2px 0;border:2px dashed var(--c-ink-muted);border-radius:var(--r-corner);background:var(--c-paper);color:var(--c-ink-muted);font-size:12px;font-weight:700}.empty-icon{font-size:20px;opacity:0.5}@keyframes fade-slide-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
 </style></head><body><div id="app"></div><style id="edm-rel-css">
-/* 关系档案 · 角色个人信息页样式（前缀 edm-，全部限定在 #edm-rel-ov 内） */
+/* 关系档案 · 角色个人信息页（视觉语言对齐状态栏：同一套字体、字号、边框、阴影、色板） */
 #edm-rel-ov {
-  --edm-fs: 13px;
+  --font-main: 'Microsoft YaHei', 'PingFang SC', 'Segoe UI', sans-serif;
   --c-cream: #fff9ef;
   --c-paper: #fffdf6;
-  --c-ink: #111111;
-  --c-ink-soft: #444444;
-  --c-ink-muted: #777777;
+  --c-ink: #111;
+  --c-ink-soft: #444;
+  --c-ink-muted: #777;
   --c-yellow: #ffd23f;
   --c-blue: #4d9de0;
   --c-pink: #ff5c8a;
@@ -47,25 +47,18 @@
   --c-purple: #9b59b6;
   --c-green: #2ec4b6;
   --c-orange: #ff9f1c;
-  --border-w: 2px;
-  --r-corner: 4px;
-  --shadow-hard: 3px 3px 0 var(--c-ink);
   position: fixed;
   inset: 0;
   z-index: 2147483000;
-  font-family: var(--font-main, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif);
-  font-size: var(--edm-fs);
+  font-family: var(--font-main);
+  font-size: 13px;
   line-height: 1.5;
   color: var(--c-ink);
-  -webkit-font-smoothing: antialiased;
   text-align: left;
+  -webkit-font-smoothing: antialiased;
 }
-#edm-rel-ov *,
-#edm-rel-ov *::before,
-#edm-rel-ov *::after { box-sizing: border-box; }
 
-#edm-rel-ov.edm-on { display: block; }
-
+/* 深色模式：与状态栏 .status-card.mode-dark 完全同值 */
 #edm-rel-ov.x-dark {
   --c-cream: #0f0d17;
   --c-paper: #1d1a28;
@@ -77,14 +70,20 @@
   --c-pink: #ff5fa2;
   --c-red: #ff4d6d;
   --c-purple: #bb8ef9;
-  --c-green: #3ddbc9;
-  --c-orange: #ffb347;
+  --c-green: #2fd9a4;
+  --c-orange: #ff9e2e;
 }
+
+#edm-rel-ov *,
+#edm-rel-ov *::before,
+#edm-rel-ov *::after { box-sizing: border-box; }
+
+#edm-rel-ov.edm-on { display: block; }
 
 #edm-rel-ov .edm-bd {
   position: absolute;
   inset: 0;
-  background: rgba(12, 10, 18, 0.34);
+  background: rgba(12, 10, 18, 0.36);
   -webkit-backdrop-filter: blur(1.5px);
   backdrop-filter: blur(1.5px);
   animation: edm-fade 0.16s ease-out;
@@ -95,312 +94,373 @@
   left: 50%;
   top: 24px;
   transform: translateX(-50%);
-  width: min(560px, calc(100vw - 24px));
+  width: min(520px, calc(100vw - 24px));
 }
 
+/* 面板本体＝放大版状态栏卡片：奶油底、3px 墨边、4px 圆角、硬阴影 */
 #edm-rel-ov .edm-panel {
   display: flex;
   flex-direction: column;
-  background: var(--c-paper);
-  border: var(--border-w) solid var(--c-ink);
-  border-radius: var(--r-corner);
-  box-shadow: var(--shadow-hard);
+  background: var(--c-cream);
+  border: 3px solid var(--c-ink);
+  border-radius: 4px;
+  box-shadow: 5px 5px 0 var(--c-ink);
   overflow: hidden;
   animation: edm-in 0.18s cubic-bezier(0.2, 0.9, 0.3, 1.2);
 }
 
-#edm-rel-ov .edm-strip {
-  height: 6px;
+#edm-rel-ov .edm-deco {
   flex: 0 0 auto;
-  background: repeating-linear-gradient(45deg, var(--c-yellow) 0 6px, transparent 6px 12px);
-  border-bottom: var(--border-w) solid var(--c-ink);
+  height: 10px;
+  background: repeating-linear-gradient(-45deg, var(--c-red) 0 10px, var(--c-yellow) 10px 20px, var(--c-blue) 20px 30px);
+  border-bottom: 2px solid var(--c-ink);
 }
 
 #edm-rel-ov .edm-head {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
   flex: 0 0 auto;
-  border-bottom: var(--border-w) solid var(--c-ink);
+  padding: 12px 14px;
   background: var(--c-paper);
+  border-bottom: 2px solid var(--c-ink);
 }
 
-#edm-rel-ov .edm-badge {
-  flex: 0 0 36px;
-  width: 36px;
-  height: 36px;
+#edm-rel-ov .edm-avatar {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
   font-weight: 900;
-  color: #fff;
+  line-height: 1;
+  color: var(--c-ink);
   background: var(--c-purple);
-  border: var(--border-w) solid var(--c-ink);
-  border-radius: var(--r-corner);
+  border: 2px solid var(--c-ink);
+  border-radius: 4px;
   box-shadow: 2px 2px 0 var(--c-ink);
   user-select: none;
 }
-#edm-rel-ov .edm-badge.love { background: var(--c-pink); }
-#edm-rel-ov .edm-badge.friend { background: var(--c-blue); }
-#edm-rel-ov .edm-badge.rival { background: var(--c-red); }
-#edm-rel-ov .edm-badge.neutral { background: var(--c-purple); }
+#edm-rel-ov .edm-avatar.love { background: var(--c-red); color: var(--c-paper); }
+#edm-rel-ov .edm-avatar.friend { background: var(--c-blue); color: var(--c-ink); }
+#edm-rel-ov .edm-avatar.rival { background: var(--c-purple); color: var(--c-ink); }
+#edm-rel-ov .edm-avatar.neutral { background: var(--c-yellow); color: var(--c-ink); }
 
 #edm-rel-ov .edm-id { flex: 1 1 auto; min-width: 0; }
 #edm-rel-ov .edm-name { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-#edm-rel-ov .edm-nm { font-size: 15px; font-weight: 900; letter-spacing: 0.02em; }
+#edm-rel-ov .edm-nm {
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: var(--c-ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 #edm-rel-ov .edm-meta {
+  margin-top: 2px;
   font-size: 11px;
   color: var(--c-ink-muted);
-  margin-top: 2px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+#edm-rel-ov .edm-tag {
+  flex-shrink: 0;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 16px;
+  padding: 0 6px;
+  border: 2px solid var(--c-ink);
+  border-radius: 4px;
+  color: var(--c-ink);
+  background: var(--c-paper);
+}
+#edm-rel-ov .edm-tag.love { background: var(--c-red); color: var(--c-paper); }
+#edm-rel-ov .edm-tag.friend { background: var(--c-blue); }
+#edm-rel-ov .edm-tag.rival { background: var(--c-purple); }
+#edm-rel-ov .edm-tag.neutral { background: var(--c-yellow); }
 
 #edm-rel-ov .edm-x {
   flex: 0 0 auto;
   width: 26px;
   height: 26px;
   padding: 0;
+  font-family: inherit;
   font-size: 12px;
   font-weight: 900;
   line-height: 1;
   color: var(--c-ink);
   background: var(--c-cream);
-  border: var(--border-w) solid var(--c-ink);
-  border-radius: var(--r-corner);
+  border: 2px solid var(--c-ink);
+  border-radius: 4px;
   box-shadow: 2px 2px 0 var(--c-ink);
   cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
-#edm-rel-ov .edm-x:hover { background: var(--c-red); color: #fff; }
-#edm-rel-ov .edm-x:active { transform: translate(2px, 2px); box-shadow: none; }
+#edm-rel-ov .edm-x:hover { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--c-ink); background: var(--c-red); color: var(--c-paper); }
+#edm-rel-ov .edm-x:active { transform: translate(3px, 3px); box-shadow: none; }
 
+/* 双进度条：直接沿用关系卡的 .bar-block / .relation-bar-track 规格 */
 #edm-rel-ov .edm-bars {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  padding: 9px 12px;
   flex: 0 0 auto;
-  border-bottom: var(--border-w) solid var(--c-ink);
+  padding: 10px 14px;
   background: var(--c-cream);
+  border-bottom: 2px solid var(--c-ink);
 }
-#edm-rel-ov .edm-bar { min-width: 0; }
-#edm-rel-ov .edm-bar-h {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 6px;
-  margin-bottom: 3px;
+#edm-rel-ov .edm-bar { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+#edm-rel-ov .edm-bar-h { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+#edm-rel-ov .edm-bar-n { font-size: 9px; font-weight: 900; color: var(--c-ink-muted); letter-spacing: 0.5px; }
+#edm-rel-ov .edm-bar-v {
+  font-size: 10px;
+  font-weight: 900;
+  padding: 0 5px;
+  border: 2px solid var(--c-ink);
+  border-radius: 4px;
+  line-height: 14px;
+  font-variant-numeric: tabular-nums;
+  background: var(--c-paper);
+  color: var(--c-ink);
 }
-#edm-rel-ov .edm-bar-n { font-size: 10px; font-weight: 900; color: var(--c-ink-soft); }
-#edm-rel-ov .edm-bar-v { font-size: 11px; font-weight: 900; font-variant-numeric: tabular-nums; }
-#edm-rel-ov .edm-bar-v.blue { color: var(--c-blue); }
-#edm-rel-ov .edm-bar-v.red { color: var(--c-red); }
-#edm-rel-ov .edm-bar-v.pink { color: var(--c-pink); }
+#edm-rel-ov .edm-bar-v.blue { background: var(--c-blue); }
+#edm-rel-ov .edm-bar-v.pink { background: var(--c-pink); }
+#edm-rel-ov .edm-bar-v.red { background: var(--c-red); color: var(--c-paper); }
 
 #edm-rel-ov .edm-track {
   position: relative;
-  height: 8px;
+  width: 100%;
+  height: 11px;
   background: var(--c-paper);
-  border: var(--border-w) solid var(--c-ink);
-  border-radius: 2px;
-  overflow: hidden;
+  border: 2px solid var(--c-ink);
+  overflow: visible;
 }
-#edm-rel-ov .edm-fill { position: absolute; top: 0; bottom: 0; display: block; }
-#edm-rel-ov .edm-fill.blue { background: var(--c-blue); }
-#edm-rel-ov .edm-fill.red { background: var(--c-red); }
-#edm-rel-ov .edm-fill.pink { background: var(--c-pink); }
-#edm-rel-ov .edm-zero {
+#edm-rel-ov .edm-fill {
   position: absolute;
   top: 0;
-  bottom: 0;
+  height: 100%;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#edm-rel-ov .edm-fill.blue { background: var(--c-blue); }
+#edm-rel-ov .edm-fill.pink { background: var(--c-pink); }
+#edm-rel-ov .edm-fill.red { background: var(--c-red); }
+#edm-rel-ov .edm-zero {
+  position: absolute;
   left: 50%;
-  width: 2px;
-  margin-left: -1px;
-  background: var(--c-ink);
+  top: -3px;
+  bottom: -3px;
+  border-left: 2px dashed var(--c-ink-muted);
+  z-index: 1;
+}
+#edm-rel-ov .edm-heart {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: var(--c-ink);
+  background: var(--c-pink);
+  border: 2px solid var(--c-ink);
+  transform: translateY(-50%);
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
 }
 
+/* 页签：沿用 .tab-btn 规格（12px/800、硬阴影、按下位移、选中黄底） */
 #edm-rel-ov .edm-tabs {
   display: flex;
-  gap: 5px;
-  padding: 8px 12px 0;
+  gap: 6px;
   flex: 0 0 auto;
-  border-bottom: var(--border-w) solid var(--c-ink);
-  background: var(--c-paper);
+  padding: 10px 14px;
+  background: var(--c-cream);
+  border-bottom: 2px solid var(--c-ink);
 }
 #edm-rel-ov .edm-tab {
-  padding: 3px 11px;
-  font-size: 11px;
-  font-weight: 900;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 7px 4px;
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
   color: var(--c-ink);
-  background: var(--c-cream);
-  border: var(--border-w) solid var(--c-ink);
-  border-bottom: none;
-  border-radius: var(--r-corner) var(--r-corner) 0 0;
+  background: var(--c-paper);
+  border: 2px solid var(--c-ink);
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 var(--c-ink);
   cursor: pointer;
-  transition: transform 0.1s ease;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
-#edm-rel-ov .edm-tab:hover { transform: translateY(-1px); }
-#edm-rel-ov .edm-tab.is-on {
-  background: var(--c-yellow);
-  box-shadow: 2px 0 0 var(--c-ink), -2px 0 0 var(--c-ink);
-  transform: translateY(2px);
-}
+#edm-rel-ov .edm-tab:hover { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--c-ink); }
+#edm-rel-ov .edm-tab:active { transform: translate(3px, 3px); box-shadow: none; }
+#edm-rel-ov .edm-tab.is-on { background: var(--c-yellow); }
 
 #edm-rel-ov .edm-body {
   flex: 1 1 auto;
   min-height: 0;
-  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 14px;
   overflow-y: auto;
   overscroll-behavior: contain;
-  background: var(--c-paper);
+  background: var(--c-cream);
   scrollbar-width: thin;
 }
-#edm-rel-ov .edm-body::-webkit-scrollbar { width: 8px; }
-#edm-rel-ov .edm-body::-webkit-scrollbar-thumb {
-  background: var(--c-ink-muted);
-  border-radius: 4px;
-  border: 2px solid var(--c-paper);
-}
+#edm-rel-ov .edm-body::-webkit-scrollbar { width: 6px; height: 6px; }
+#edm-rel-ov .edm-body::-webkit-scrollbar-track { background: transparent; }
+#edm-rel-ov .edm-body::-webkit-scrollbar-thumb { background: var(--c-ink); border-radius: 0; }
 
-#edm-rel-ov .edm-sec { margin-bottom: 12px; }
-#edm-rel-ov .edm-sec:last-child { margin-bottom: 0; }
+#edm-rel-ov .edm-sec { display: flex; flex-direction: column; gap: 6px; }
 #edm-rel-ov .edm-sec-h {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 5px;
   font-size: 10px;
   font-weight: 900;
-  letter-spacing: 0.08em;
-  color: var(--c-ink-muted);
-}
-#edm-rel-ov .edm-sec-h::after {
-  content: "";
-  flex: 1 1 auto;
-  height: 2px;
-  background: repeating-linear-gradient(90deg, var(--c-ink) 0 4px, transparent 4px 8px);
-  opacity: 0.22;
+  letter-spacing: 1px;
+  color: var(--c-ink-soft);
 }
 
-#edm-rel-ov .edm-quote {
-  padding: 7px 9px;
-  font-size: 12px;
-  line-height: 1.62;
-  white-space: pre-wrap;
-  word-break: break-word;
-  background: var(--c-cream);
-  border: var(--border-w) solid var(--c-ink);
-  border-left-width: 5px;
-  border-radius: 3px;
-}
-#edm-rel-ov .edm-quote.imp { border-left-color: var(--c-blue); }
-#edm-rel-ov .edm-quote.voice { border-left-color: var(--c-pink); font-style: italic; }
-#edm-rel-ov .edm-quote.recent { border-left-color: var(--c-green); }
-#edm-rel-ov .edm-quote.is-empty {
-  font-style: normal;
-  color: var(--c-ink-muted);
-  border-left-color: var(--c-ink-muted);
-  background: transparent;
-  border-style: dashed;
-}
+/* 印象 / 心声 / 最近互动：与关系卡 .rel-line 同规格 */
+#edm-rel-ov .edm-lines { display: flex; flex-direction: column; gap: 5px; }
+#edm-rel-ov .edm-line { display: flex; align-items: flex-start; gap: 5px; font-size: 11px; line-height: 1.5; }
+#edm-rel-ov .edm-line .edm-tag { margin-top: 1px; background: var(--c-yellow); }
+#edm-rel-ov .edm-line.imp .edm-tag { background: var(--c-blue); }
+#edm-rel-ov .edm-line.voice .edm-tag { background: var(--c-paper); color: var(--c-ink-muted); }
+#edm-rel-ov .edm-line.recent .edm-tag { background: var(--c-green); }
+#edm-rel-ov .edm-text { flex: 1; color: var(--c-ink-soft); word-break: break-word; }
+#edm-rel-ov .edm-line.voice .edm-text { color: var(--c-ink); font-style: italic; font-weight: 600; }
+#edm-rel-ov .edm-line.recent .edm-text { color: var(--c-ink-muted); font-size: 10px; }
+#edm-rel-ov .edm-text.is-empty { color: var(--c-ink-muted); font-style: normal; font-weight: 400; opacity: 0.75; }
 
-#edm-rel-ov .edm-kv {
+/* 字段格：与形象模块 .look-cell 同规格（纸白底、2px 墨边、左侧 6px 色条、硬阴影） */
+#edm-rel-ov .edm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+#edm-rel-ov .edm-cell {
   display: flex;
-  gap: 8px;
-  padding: 4px 2px;
-  font-size: 12px;
-  border-bottom: 1px dashed rgba(127, 127, 127, 0.3);
-}
-#edm-rel-ov .edm-kv:last-child { border-bottom: none; }
-#edm-rel-ov .edm-k { flex: 0 0 62px; font-weight: 700; color: var(--c-ink-muted); }
-#edm-rel-ov .edm-v { flex: 1 1 auto; min-width: 0; word-break: break-word; }
-#edm-rel-ov .edm-v.is-empty { color: var(--c-ink-muted); }
-
-#edm-rel-ov .edm-dev {
-  display: inline-block;
-  vertical-align: middle;
-  width: 88px;
-  height: 7px;
-  margin-right: 6px;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  padding: 8px 10px;
   background: var(--c-paper);
-  border: var(--border-w) solid var(--c-ink);
-  border-radius: 2px;
-  overflow: hidden;
+  border: 2px solid var(--c-ink);
+  border-left: 6px solid var(--c-pink);
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 var(--c-ink);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-#edm-rel-ov .edm-dev i {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, var(--c-pink), var(--c-red));
+#edm-rel-ov .edm-cell:hover { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--c-ink); }
+#edm-rel-ov .edm-cell.span-2 { grid-column: 1 / -1; }
+#edm-rel-ov .edm-grid.look .edm-cell { border-left-color: var(--c-blue); }
+#edm-rel-ov .edm-grid.nsfw .edm-cell { border-left-color: var(--c-purple); }
+#edm-rel-ov .edm-cell.overall {
+  border-left-color: var(--c-yellow);
+  background: linear-gradient(90deg, var(--c-yellow) 0%, var(--c-paper) 42%);
 }
-#edm-rel-ov .edm-dev-n {
-  font-size: 11px;
+#edm-rel-ov.x-dark .edm-cell.overall {
+  background: linear-gradient(90deg, rgba(245, 197, 24, 0.12), rgba(245, 197, 24, 0.02));
+}
+#edm-rel-ov .edm-k {
+  font-size: 10px;
   font-weight: 900;
-  vertical-align: middle;
-  color: var(--c-red);
-  font-variant-numeric: tabular-nums;
+  color: var(--c-ink-soft);
+  letter-spacing: 1px;
 }
+#edm-rel-ov .edm-v {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--c-ink);
+  line-height: 1.5;
+  white-space: normal;
+  word-break: break-word;
+}
+#edm-rel-ov .edm-v.is-empty { color: var(--c-ink-muted); font-style: italic; opacity: 0.7; }
 
+/* 状态标签（私密状态 / 关系）：与 .relation-tag 同规格 */
 #edm-rel-ov .edm-chip {
   display: inline-block;
-  padding: 0 6px;
   font-size: 9px;
   font-weight: 900;
   line-height: 15px;
+  padding: 0 5px;
+  border: 2px solid var(--c-ink);
+  border-radius: 4px;
   white-space: nowrap;
-  color: #fff;
-  background: var(--c-purple);
-  border: var(--border-w) solid var(--c-ink);
-  border-radius: 2px;
+  color: var(--c-ink);
+  background: var(--c-paper);
 }
-#edm-rel-ov .edm-chip.love { background: var(--c-pink); }
-#edm-rel-ov .edm-chip.friend { background: var(--c-blue); }
-#edm-rel-ov .edm-chip.rival { background: var(--c-red); }
-#edm-rel-ov .edm-chip.neutral { background: var(--c-purple); }
-#edm-rel-ov .edm-chip.n0 { color: var(--c-ink-muted); background: var(--c-cream); }
-#edm-rel-ov .edm-chip.n1 { color: var(--c-ink); background: var(--c-yellow); }
-#edm-rel-ov .edm-chip.n2 { color: var(--c-ink); background: var(--c-orange); }
-#edm-rel-ov .edm-chip.n3 { color: #fff; background: var(--c-red); }
+#edm-rel-ov .edm-chip.n0 { color: var(--c-ink-muted); background: var(--c-paper); }
+#edm-rel-ov .edm-chip.n1 { background: var(--c-yellow); }
+#edm-rel-ov .edm-chip.n2 { background: var(--c-orange); }
+#edm-rel-ov .edm-chip.n3 { background: var(--c-red); color: var(--c-paper); }
 
+#edm-rel-ov .edm-dev {
+  display: block;
+  width: 100%;
+  height: 9px;
+  margin: 2px 0;
+  background: var(--c-paper);
+  border: 2px solid var(--c-ink);
+  overflow: hidden;
+}
+#edm-rel-ov .edm-dev i { display: block; height: 100%; background: var(--c-pink); }
+#edm-rel-ov .edm-dev-n { font-size: 10px; font-weight: 900; color: var(--c-ink); font-variant-numeric: tabular-nums; }
+
+/* 空状态：与 .empty-hint 同规格 */
 #edm-rel-ov .edm-none {
-  padding: 18px 14px;
-  text-align: center;
-  background: var(--c-cream);
-  border: var(--border-w) dashed var(--c-ink-muted);
-  border-radius: var(--r-corner);
-}
-#edm-rel-ov .edm-none-t { margin-bottom: 4px; font-size: 12px; font-weight: 900; }
-#edm-rel-ov .edm-none-h { font-size: 11px; line-height: 1.6; color: var(--c-ink-muted); }
-
-#edm-rel-ov .edm-mask {
-  padding: 16px 12px;
-  text-align: center;
-  border: var(--border-w) solid var(--c-ink);
-  border-radius: var(--r-corner);
-  background-image: repeating-linear-gradient(45deg, rgba(127, 127, 127, 0.09) 0 8px, transparent 8px 16px);
-  background-color: var(--c-cream);
-}
-#edm-rel-ov .edm-mask-t { margin-bottom: 6px; font-size: 13px; font-weight: 900; letter-spacing: 0.1em; }
-#edm-rel-ov .edm-mask-h { margin-bottom: 10px; font-size: 11px; color: var(--c-ink-muted); }
-#edm-rel-ov .edm-mask-n { margin-top: 8px; font-size: 10px; color: var(--c-ink-muted); }
-
-#edm-rel-ov .edm-btn {
-  padding: 5px 16px;
-  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 26px 16px;
+  background: var(--c-paper);
+  border: 2px dashed var(--c-ink-muted);
+  border-radius: 4px;
+  color: var(--c-ink-muted);
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
+  text-align: center;
+}
+#edm-rel-ov .edm-none-t { font-size: 12px; font-weight: 700; }
+#edm-rel-ov .edm-none-h { font-size: 11px; font-weight: 400; line-height: 1.6; }
+
+/* 私密遮罩 */
+#edm-rel-ov .edm-mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 26px 16px;
+  text-align: center;
+  background-color: var(--c-paper);
+  background-image: repeating-linear-gradient(45deg, rgba(127, 127, 127, 0.08) 0 8px, transparent 8px 16px);
+  border: 2px dashed var(--c-ink-muted);
+  border-radius: 4px;
+}
+#edm-rel-ov .edm-mask-t { font-size: 12px; font-weight: 900; letter-spacing: 0.5px; }
+#edm-rel-ov .edm-mask-h { font-size: 11px; color: var(--c-ink-muted); }
+#edm-rel-ov .edm-btn {
+  padding: 5px 14px;
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
   color: var(--c-ink);
   background: var(--c-yellow);
-  border: var(--border-w) solid var(--c-ink);
-  border-radius: var(--r-corner);
+  border: 2px solid var(--c-ink);
+  border-radius: 4px;
   box-shadow: 2px 2px 0 var(--c-ink);
   cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
+#edm-rel-ov .edm-btn:hover { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--c-ink); }
 #edm-rel-ov .edm-btn:active { transform: translate(2px, 2px); box-shadow: none; }
 
 #edm-rel-ov .edm-foot {
@@ -408,12 +468,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 6px 12px;
   flex: 0 0 auto;
+  padding: 8px 14px;
   font-size: 10px;
   color: var(--c-ink-muted);
-  background: var(--c-cream);
-  border-top: var(--border-w) solid var(--c-ink);
+  background: var(--c-paper);
+  border-top: 2px solid var(--c-ink);
 }
 
 /* 外层关系卡的可点击提示（需压过远端 scoped 规则，故提高特异性） */
@@ -437,14 +497,14 @@ html body .status-card .relation-grid .relation-header::after {
 @media (max-width: 600px) {
   #edm-rel-ov .edm-pos { width: calc(100vw - 16px); }
   #edm-rel-ov .edm-bars { grid-template-columns: 1fr; gap: 7px; }
-  #edm-rel-ov .edm-tab { padding: 3px 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   #edm-rel-ov .edm-panel, #edm-rel-ov .edm-bd { animation: none; }
 }
 </style>
 <script>
-/* 关系档案 · 角色个人信息页（附加脚本，注入到状态栏 iframe 内） */
+/* 关系档案 · 角色个人信息页（附加脚本，注入到状态栏 iframe 内）
+   视觉规格直接复用状态栏：同一字体、字号层级、2px 墨边 + 2px 硬阴影、4px 圆角、同一套 CSS 变量。 */
 (function () {
   'use strict';
   var NS = window.__EDM_REL__ = window.__EDM_REL__ || {};
@@ -554,15 +614,15 @@ html body .status-card .relation-grid .relation-header::after {
     return false;
   }
 
-  /* ---------- 小部件 ---------- */
+  /* ---------- 小部件（类名与状态栏同构） ---------- */
   function kindOf(t) {
     if (/(恋人|暧昧|深恋|伴侣|爱人)/.test(t)) { return 'love'; }
     if (/(挚友|朋友|师徒|盟友|亲人|家人)/.test(t)) { return 'friend'; }
     if (/(对手|敌人|仇人)/.test(t)) { return 'rival'; }
     return 'neutral';
   }
-  function tagChip(t) {
-    return t ? '<span class="edm-chip ' + kindOf(t) + '">' + esc(t) + '</span>' : '';
+  function tagHTML(t) {
+    return t ? '<span class="edm-tag ' + kindOf(t) + '">' + esc(t) + '</span>' : '';
   }
   function statusChip(t) {
     if (!t) { return '<span class="edm-chip n0">未涉及</span>'; }
@@ -572,21 +632,30 @@ html body .status-card .relation-grid .relation-header::after {
     else if (/暧昧|试探|心动|擦边/.test(t)) { cls = 'n1'; }
     return '<span class="edm-chip ' + cls + '">' + esc(t) + '</span>';
   }
-  function quote(kind, v, empty) {
+  /* 一行「标签 + 文本」，等价于关系卡的 .rel-line */
+  function line(kind, label, v, empty) {
     var t = txt(v);
-    if (!t) { return '<div class="edm-quote ' + kind + ' is-empty">' + esc(empty) + '</div>'; }
-    return '<div class="edm-quote ' + kind + '">' + esc(t) + '</div>';
+    return '<div class="edm-line ' + kind + '"><span class="edm-tag">' + esc(label) + '</span>' +
+      '<span class="edm-text' + (t ? '' : ' is-empty') + '">' + esc(t || empty) + '</span></div>';
   }
-  function kvRow(k, v) {
+  /* 一个字段格，等价于形象模块的 .look-cell */
+  function cellHTML(label, v, span) {
     var t = txt(v);
-    return '<div class="edm-kv"><span class="edm-k">' + esc(k) + '</span><span class="edm-v' + (t ? '' : ' is-empty') + '">' + (t ? esc(t) : '—') + '</span></div>';
+    return '<div class="edm-cell' + (span ? ' span-2' : '') + '">' +
+      '<div class="edm-k">' + esc(label) + '</div>' +
+      '<div class="edm-v' + (t ? '' : ' is-empty') + '">' + (t ? esc(t) : '—') + '</div></div>';
   }
   function noneBlock(t, h) {
     return '<div class="edm-none"><div class="edm-none-t">' + esc(t) + '</div>' + (h ? '<div class="edm-none-h">' + esc(h) + '</div>' : '') + '</div>';
   }
-  function devBar(v) {
+  function devCell(v) {
     var x = clamp(num(v), 0, 100);
-    return '<div class="edm-kv"><span class="edm-k">开发度</span><span class="edm-v"><span class="edm-dev"><i style="width:' + x + '%"></i></span><span class="edm-dev-n">' + round1(x) + '</span></span></div>';
+    return '<div class="edm-cell"><div class="edm-k">开发度</div>' +
+      '<div class="edm-dev"><i style="width:' + x + '%"></i></div>' +
+      '<div class="edm-dev-n">' + round1(x) + '</div></div>';
+  }
+  function statusCell(status) {
+    return '<div class="edm-cell"><div class="edm-k">状态</div><div class="edm-v">' + statusChip(txt(status)) + '</div></div>';
   }
 
   function favorHTML(v) {
@@ -595,48 +664,56 @@ html body .status-card .relation-grid .relation-header::after {
     var neg = x < 0;
     var cls = neg ? 'red' : 'blue';
     var style = (neg ? 'right:50%;left:auto;' : 'left:50%;') + 'width:' + w + '%';
-    return '<div class="edm-bar"><div class="edm-bar-h"><span class="edm-bar-n">好感</span><span class="edm-bar-v ' + cls + '">' + (x > 0 ? '+' : '') + round1(x) + '</span></div>' +
-      '<div class="edm-track edm-dual"><i class="edm-zero"></i><i class="edm-fill ' + cls + '" style="' + style + '"></i></div></div>';
+    return '<div class="edm-bar"><div class="edm-bar-h"><span class="edm-bar-n">好感</span>' +
+      '<span class="edm-bar-v ' + cls + '">' + (x > 0 ? '+' : '') + round1(x) + '</span></div>' +
+      '<div class="edm-track"><i class="edm-zero"></i><i class="edm-fill ' + cls + '" style="' + style + '"></i></div></div>';
   }
   function heartHTML(v) {
     var x = clamp(num(v), 0, 100);
-    return '<div class="edm-bar"><div class="edm-bar-h"><span class="edm-bar-n">心动</span><span class="edm-bar-v pink">' + round1(x) + '</span></div>' +
-      '<div class="edm-track"><i class="edm-fill pink" style="width:' + x + '%"></i></div></div>';
+    var left = clamp(x, 6, 94);
+    return '<div class="edm-bar"><div class="edm-bar-h"><span class="edm-bar-n">心动</span>' +
+      '<span class="edm-bar-v pink">' + round1(x) + '</span></div>' +
+      '<div class="edm-track"><i class="edm-fill pink" style="width:' + x + '%"></i>' +
+      '<i class="edm-heart" style="left:calc(' + left + '% - 8px)">♥</i></div></div>';
   }
 
   /* ---------- 面板内容 ---------- */
   function overviewHTML(r) {
     var a = r.arc;
-    var h = '';
-    h += '<div class="edm-sec"><div class="edm-sec-h">印象</div>' + quote('imp', r.imp, '尚未形成印象') + '</div>';
-    h += '<div class="edm-sec"><div class="edm-sec-h">心声</div>' + quote('voice', r.voice, '没有可读的心声') + '</div>';
-    h += '<div class="edm-sec"><div class="edm-sec-h">最近互动</div>' + quote('recent', r.recent, '暂无记录') + '</div>';
+    var h = '<div class="edm-lines">';
+    h += line('imp', '印象', r.imp, '尚未形成印象');
+    h += line('voice', '心声', r.voice, '没有可读的心声');
+    h += line('recent', '最近互动', r.recent, '暂无记录');
+    h += '</div>';
 
     var info = '';
     var idt = txt(a['身份']);
     var co = txt(a['所属公司'] || a['公司']);
-    if (idt) { info += kvRow('身份', idt); }
-    if (co && !(idt && idt.indexOf(co) >= 0)) { info += kvRow('公司', co); }
-    if (txt(a['年龄'])) { info += kvRow('年龄', a['年龄']); }
-    if (txt(a['性别'])) { info += kvRow('性别', a['性别']); }
-    if (info) { h += '<div class="edm-sec"><div class="edm-sec-h">档案</div>' + info + '</div>'; }
+    if (idt) { info += cellHTML('身份', idt, true); }
+    if (co && !(idt && idt.indexOf(co) >= 0)) { info += cellHTML('公司', co); }
+    if (txt(a['年龄'])) { info += cellHTML('年龄', a['年龄']); }
+    if (txt(a['性别'])) { info += cellHTML('性别', a['性别']); }
+    if (info) {
+      h += '<div class="edm-sec"><div class="edm-sec-h">档案</div><div class="edm-grid">' + info + '</div></div>';
+    }
 
     var n = nsfwOf(a) || {};
     var dev = n['开发度'] !== undefined && txt(n['开发度']) !== '' ? n['开发度'] : null;
-    h += '<div class="edm-sec"><div class="edm-sec-h">欲望</div>' +
-      '<div class="edm-kv"><span class="edm-k">状态</span><span class="edm-v">' + statusChip(txt(n['状态'])) + '</span></div>' +
-      (dev !== null ? devBar(dev) : '') + '</div>';
+    h += '<div class="edm-sec"><div class="edm-sec-h">欲望</div><div class="edm-grid">' +
+      statusCell(n['状态']) + (dev !== null ? devCell(dev) : '') + '</div></div>';
     return h;
   }
 
   function lookHTML(r) {
     var o = lookOf(r.arc);
     if (!hasAny(o)) { return noneBlock('尚无外貌记录'); }
-    var h = '<div class="edm-sec"><div class="edm-sec-h">外貌</div>';
+    var h = '<div class="edm-grid look">';
     var i, k;
-    for (i = 0; i < LOOK_KEYS.length; i++) { h += kvRow(LOOK_KEYS[i], o[LOOK_KEYS[i]]); }
+    for (i = 0; i < LOOK_KEYS.length; i++) {
+      h += cellHTML(LOOK_KEYS[i], o[LOOK_KEYS[i]], LOOK_KEYS[i] === '整体外观');
+    }
     for (k in o) {
-      if (LOOK_KEYS.indexOf(k) < 0 && txt(o[k])) { h += kvRow(k, o[k]); }
+      if (LOOK_KEYS.indexOf(k) < 0 && txt(o[k])) { h += cellHTML(k, o[k]); }
     }
     return h + '</div>';
   }
@@ -644,13 +721,16 @@ html body .status-card .relation-grid .relation-header::after {
   function wearHTML(r) {
     var w = wearOf(r.arc);
     if (!hasAny(w)) { return noneBlock('尚无穿着记录'); }
-    var h = '<div class="edm-sec"><div class="edm-sec-h">穿着</div>';
+    var h = '<div class="edm-grid wear">';
     var i;
-    for (i = 0; i < WEAR_KEYS.length; i++) { h += kvRow(WEAR_KEYS[i], w[WEAR_KEYS[i]]); }
+    for (i = 0; i < WEAR_KEYS.length; i++) {
+      h += cellHTML(WEAR_KEYS[i], w[WEAR_KEYS[i]]);
+    }
     h += '</div>';
     var whole = txt(w['整体']);
     if (whole) {
-      h += '<div class="edm-sec"><div class="edm-sec-h">整体印象</div><div class="edm-quote">' + esc(whole) + '</div></div>';
+      h += '<div class="edm-cell overall span-2"><div class="edm-k">整体印象</div>' +
+        '<div class="edm-v">' + esc(whole) + '</div></div>';
     }
     return h;
   }
@@ -664,28 +744,28 @@ html body .status-card .relation-grid .relation-header::after {
         (status ? '<div class="edm-mask-h">当前状态：' + esc(status) + '</div>' : '') +
         '<button type="button" class="edm-btn" data-edm="reveal">点击查看</button></div>';
     }
-    var h = '<div class="edm-sec"><div class="edm-sec-h">状态</div>' +
-      '<div class="edm-kv"><span class="edm-k">关系</span><span class="edm-v">' + statusChip(status) + '</span></div>';
-    if (n['开发度'] !== undefined && txt(n['开发度']) !== '') { h += devBar(n['开发度']); }
-    h += '</div>';
+    var dev = n['开发度'] !== undefined && txt(n['开发度']) !== '' ? n['开发度'] : null;
+    var h = '<div class="edm-grid nsfw">' + statusCell(status) + (dev !== null ? devCell(dev) : '') + '</div>';
 
     if (hasAny(priv)) {
-      h += '<div class="edm-sec"><div class="edm-sec-h">私密特征</div>';
       var used = {};
       var i, k;
+      h += '<div class="edm-sec"><div class="edm-sec-h">私密特征</div><div class="edm-grid nsfw">';
       for (i = 0; i < PRIV_KEYS.length; i++) {
         k = PRIV_KEYS[i];
-        if (txt(priv[k])) { used[k] = 1; h += kvRow(k, priv[k]); }
+        if (txt(priv[k])) { used[k] = 1; h += cellHTML(k, priv[k]); }
       }
       for (k in priv) {
-        if (!used[k] && txt(priv[k])) { h += kvRow(k, priv[k]); }
+        if (!used[k] && txt(priv[k])) { h += cellHTML(k, priv[k]); }
       }
-      h += '</div>';
+      h += '</div></div>';
     } else {
       h += noneBlock('尚无私密记录');
     }
-    if (txt(n['备注'])) {
-      h += '<div class="edm-sec"><div class="edm-sec-h">备注</div><div class="edm-quote">' + esc(txt(n['备注'])) + '</div></div>';
+    var note = txt(n['备注']);
+    if (note) {
+      h += '<div class="edm-cell overall span-2"><div class="edm-k">备注</div>' +
+        '<div class="edm-v">' + esc(note) + '</div></div>';
     }
     return h;
   }
@@ -700,9 +780,9 @@ html body .status-card .relation-grid .relation-header::after {
     root.id = 'edm-rel-ov';
     root.innerHTML = '<div class="edm-bd" data-edm="close"></div>' +
       '<div class="edm-pos"><div class="edm-panel" role="dialog" aria-modal="true" aria-label="角色档案">' +
-      '<div class="edm-strip"></div>' +
+      '<div class="edm-deco"></div>' +
       '<div class="edm-head">' +
-      '<div class="edm-badge">?</div>' +
+      '<div class="edm-avatar">?</div>' +
       '<div class="edm-id"><div class="edm-name"></div><div class="edm-meta"></div></div>' +
       '<button type="button" class="edm-x" data-edm="close" aria-label="关闭">✕</button>' +
       '</div>' +
@@ -715,20 +795,28 @@ html body .status-card .relation-grid .relation-header::after {
     return root;
   }
 
+  function syncDark() {
+    if (!ov) { return; }
+    var dark = false;
+    try { dark = !!document.querySelector('.status-card.mode-dark'); } catch (e) {}
+    ov.classList.toggle('x-dark', dark);
+  }
+
   function paint() {
     if (!ov) { return; }
+    syncDark();
     var raw = relOf(getStat(), cur.name);
     var r = normRel(raw);
     cur.sig = raw ? JSON.stringify(raw) : '';
 
     var nameBox = ov.querySelector('.edm-name');
-    var badge = ov.querySelector('.edm-badge');
+    var avatar = ov.querySelector('.edm-avatar');
     var meta = ov.querySelector('.edm-meta');
     var bars = ov.querySelector('.edm-bars');
     var body = ov.querySelector('.edm-body');
 
-    badge.textContent = cur.name ? cur.name.slice(0, 1) : '?';
-    badge.className = 'edm-badge ' + (r ? kindOf(r.tag) : 'neutral');
+    avatar.textContent = cur.name ? cur.name.slice(0, 1) : '?';
+    avatar.className = 'edm-avatar ' + (r ? kindOf(r.tag) : 'neutral');
 
     if (!r) {
       nameBox.innerHTML = '<span class="edm-nm">' + esc(cur.name) + '</span>';
@@ -738,7 +826,7 @@ html body .status-card .relation-grid .relation-header::after {
       return;
     }
 
-    nameBox.innerHTML = '<span class="edm-nm">' + esc(cur.name) + '</span>' + tagChip(r.tag);
+    nameBox.innerHTML = '<span class="edm-nm">' + esc(cur.name) + '</span>' + tagHTML(r.tag);
 
     var a = r.arc;
     var ms = [];
@@ -787,6 +875,7 @@ html body .status-card .relation-grid .relation-header::after {
 
   function tick() {
     if (!ov) { return; }
+    syncDark();
     var raw = relOf(getStat(), cur.name);
     var sig = raw ? JSON.stringify(raw) : '';
     if (sig !== cur.sig) { paint(); }
@@ -798,7 +887,6 @@ html body .status-card .relation-grid .relation-header::after {
     cur.reveal = false;
     cur.anchor = anchor || null;
     if (!ov) { ov = build(); }
-    ov.classList.toggle('x-dark', !!document.querySelector('.status-card.mode-dark'));
     paint();
     place();
     if (!timer) { timer = setInterval(tick, 1500); }
