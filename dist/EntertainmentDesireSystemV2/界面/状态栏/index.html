@@ -582,7 +582,7 @@ html body .status-card .relation-grid .relation-header::after {
     return '<div class="edm-kv"><span class="edm-k">' + esc(k) + '</span><span class="edm-v' + (t ? '' : ' is-empty') + '">' + (t ? esc(t) : '—') + '</span></div>';
   }
   function noneBlock(t, h) {
-    return '<div class="edm-none"><div class="edm-none-t">' + esc(t) + '</div><div class="edm-none-h">' + esc(h) + '</div></div>';
+    return '<div class="edm-none"><div class="edm-none-t">' + esc(t) + '</div>' + (h ? '<div class="edm-none-h">' + esc(h) + '</div>' : '') + '</div>';
   }
   function devBar(v) {
     var x = clamp(num(v), 0, 100);
@@ -631,7 +631,7 @@ html body .status-card .relation-grid .relation-header::after {
 
   function lookHTML(r) {
     var o = lookOf(r.arc);
-    if (!hasAny(o)) { return noneBlock('尚无外貌记录', '换装、造型改造、近距离相处后，AI 会把看到的样子记在这里'); }
+    if (!hasAny(o)) { return noneBlock('尚无外貌记录'); }
     var h = '<div class="edm-sec"><div class="edm-sec-h">外貌</div>';
     var i, k;
     for (i = 0; i < LOOK_KEYS.length; i++) { h += kvRow(LOOK_KEYS[i], o[LOOK_KEYS[i]]); }
@@ -643,7 +643,7 @@ html body .status-card .relation-grid .relation-header::after {
 
   function wearHTML(r) {
     var w = wearOf(r.arc);
-    if (!hasAny(w)) { return noneBlock('尚无穿着记录', '角色换装、被脱衣或衣衫凌乱时，AI 会更新这里的描写'); }
+    if (!hasAny(w)) { return noneBlock('尚无穿着记录'); }
     var h = '<div class="edm-sec"><div class="edm-sec-h">穿着</div>';
     var i;
     for (i = 0; i < WEAR_KEYS.length; i++) { h += kvRow(WEAR_KEYS[i], w[WEAR_KEYS[i]]); }
@@ -661,9 +661,8 @@ html body .status-card .relation-grid .relation-header::after {
     var priv = objOf(n, ['私密特征']);
     if (!cur.reveal) {
       return '<div class="edm-mask"><div class="edm-mask-t">私密档案</div>' +
-        '<div class="edm-mask-h">' + (status ? '当前状态：' + esc(status) : '尚未涉及 NSFW 剧情') + '</div>' +
-        '<button type="button" class="edm-btn" data-edm="reveal">点击查看</button>' +
-        '<div class="edm-mask-n">内容包含性向描写，请自行判断是否查看</div></div>';
+        (status ? '<div class="edm-mask-h">当前状态：' + esc(status) + '</div>' : '') +
+        '<button type="button" class="edm-btn" data-edm="reveal">点击查看</button></div>';
     }
     var h = '<div class="edm-sec"><div class="edm-sec-h">状态</div>' +
       '<div class="edm-kv"><span class="edm-k">关系</span><span class="edm-v">' + statusChip(status) + '</span></div>';
@@ -683,7 +682,7 @@ html body .status-card .relation-grid .relation-header::after {
       }
       h += '</div>';
     } else {
-      h += noneBlock('尚无私密记录', 'NSFW 场景中，AI 会记录已明确出现的身体细节');
+      h += noneBlock('尚无私密记录');
     }
     if (txt(n['备注'])) {
       h += '<div class="edm-sec"><div class="edm-sec-h">备注</div><div class="edm-quote">' + esc(txt(n['备注'])) + '</div></div>';
