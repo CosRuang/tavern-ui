@@ -479,9 +479,16 @@
 /* 外层关系卡的可点击提示（需压过远端 scoped 规则，故提高特异性） */
 html body .status-card .relation-card { cursor: pointer; }
 html body .status-card .relation-grid .relation-card:hover .relation-name { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+html body .status-card .relation-grid .relation-header {
+  position: relative;
+  padding-right: 12px;
+}
 html body .status-card .relation-grid .relation-header::after {
   content: "›";
-  margin-left: 2px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 13px;
   font-weight: 900;
   line-height: 1;
